@@ -13,16 +13,19 @@
 <body>
     <h3>calcola il prezzo del tuo biglietto</h3>
     <div class="card">
-        <label for="userName">Nome e Cognome</label>
-        <input type="text" id="userName">
+        <label for="username">Nome e Cognome</label>
+        <input type="text" id="username">
         <label for="kilometer">Km da percorrere</label>
-        <input type="number">
+        <input type="number" id="kilometer">
         <label for="age">Fascia d'età</label>
         <select id="age">
-            <option value="junior">Under 18</option>
-            <option value="standard">18-65 anni</option>
-            <option value="senior">Over 65</option>
+            <option value="junior" id="junior">Under 18</option>
+            <option value="standard" id="standard">18-65 anni</option>
+            <option value="senior" id="senior">Over 65</option>
         </select>
+
+        <button id="submit">Genera</button>
+        <button id="reset">Annulla</button>
     </div>
     <h3>Il tuo biglietto</h3>
     <div class="card">
