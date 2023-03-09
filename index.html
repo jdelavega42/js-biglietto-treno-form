@@ -12,8 +12,8 @@
     <!-- custom style-->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <div class="card w-75 mx-auto">
+<body class="bg-dark">
+    <div class="card w-75 mx-auto bg-warning">
         <div class="text-center">
             <h3 class="card-header text-uppercase">calcola il prezzo del tuo biglietto</h3>
             <div class="card-body">
@@ -22,20 +22,22 @@
                     <input type="text" class="form-control" id="username">
                     <label class="input-group-text"  for="kilometer">Km da percorrere</label>
                     <input type="number" class="form-control" id="kilometer">
+                </div>
+                <div class="input-group">
                     <label class="input-group-text"  for="age">Fascia d'età</label>
                     <select class="form-select" id="age">
-                        <option value="junior" id="junior">Under 18</option>
-                        <option value="standard" id="standard">18-65 anni</option>
-                        <option value="senior" id="senior">Over 65</option>
+                        <option value="junior" id="junior">Under 18 - Sconto 20%</option>
+                        <option value="standard" id="standard" selected>18-65 anni - Biglietto standard</option>
+                        <option value="senior" id="senior">Over 65 - Sconto 40%</option>
                     </select>
-                </div>
-                <div class="btn-group">
-                    <button id="submit"  class="btn btn-outline-success">Genera</button>
-                    <button id="reset" class="btn btn-outline-danger">Annulla</button>
+                    <div class="btn-group ps-3">
+                        <button id="submit"  class="btn btn-success">Genera</button>
+                        <button id="reset" class="btn btn-danger">Annulla</button>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="">
+        <div id="result" class="d-none  bg-warning">
             <h3 class="card-header text-center text-uppercase">Il tuo biglietto</h3>
             <div class="p-3">
                 <h3 class="card-title">Dettaglio passeggeri</h3>
@@ -51,7 +53,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td id="userOutput"></td>
+                            <td id="userOutput" class="text-uppercase"></td>
                             <td id="promotionOutput"></td>
                             <td id="coachOutput"></td>
                             <td id="codeOutput"></td>
